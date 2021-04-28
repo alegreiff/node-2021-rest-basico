@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const dbConnection = async () => {
   try {
-    mongoose.connect(process.env.MONGODB_ATLAS, {
+    mongoose.connect(process.env.MONGODB_DOCKER, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true,
