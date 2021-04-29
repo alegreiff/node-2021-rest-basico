@@ -32,6 +32,11 @@ class Server {
   }
   routes() {
     this.app.use(this.usuariosPath, require("../routes/usuarios"));
+    this.app.get("/peliculas/todas", (req, res) => {
+      res.json({
+        peliculas: "nolas",
+      });
+    });
   }
   listen() {
     this.app.listen(this.port, () => {
